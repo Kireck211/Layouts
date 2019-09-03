@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Layouts</string>
+    <string name="activity_main_to">to</string>
+    <string name="activity_main_from">from</string>
+    <string name="activity_main_message">message</string>
+    <string name="activity_main_send">send</string>
+    <string name="to_string">to</string>
+</resources>

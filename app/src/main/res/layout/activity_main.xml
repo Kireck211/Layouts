@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activity_main_tv_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50sp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_btn_decrement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main_g_50_v"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_main_btn_decrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_main_btn_reset"
+        app:layout_constraintEnd_toStartOf="@id/activity_main_g_50_v"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_tv_counter" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_main_btn_increment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main_btn_decrement"
+        app:layout_constraintStart_toEndOf="@id/activity_main_g_50_v"
+        app:layout_constraintTop_toTopOf="@id/activity_main_btn_decrement" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_main_btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/activity_main_btn_increment"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/activity_main_btn_decrement"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_btn_decrement" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
